@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -14,16 +14,15 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    padding: 20px 30px;
 }
 
 .wrapper__header {
-    width: 90%;
-    height: 48px;
+    width: 100%;
+    height: 45px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px auto;
 }
 
 .wrapper__header__updated__news {
@@ -55,12 +54,11 @@ html, body {
 }
 
 .wrapper__body {
-    width: 90%;
+    width: 100%;
     height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px auto;
 }
 
 .wrapper__body__header {

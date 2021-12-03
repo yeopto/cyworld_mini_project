@@ -3,6 +3,23 @@
 <head>
     <title>게임</title>
     <link href="./styles/game.css" rel="stylesheet">
+    <script>
+        const startWord = () => {
+            const word = document.getElementById("word").innerText // 코드캠프
+            const lastWord = word[word.length - 1]
+            const myWord = document.getElementById("myword").value // 프랑스
+            const firstWord = myWord[0]
+
+            if (firstWord === lastWord) {
+                document.getElementById("result").innerText = "정답입니다!"
+                document.getElementById("word").innerText = "제시어: " + myWord
+                document.getElementById("myword").value = ""
+            } else {
+                document.getElementById("result").innerText = "땡!"
+                document.getElementById("myword").value = ""
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -17,12 +34,12 @@
             <div class="wrapper__word__header">
                 <img src="images/word.png">
                 <div class="title">끝말잇기</div>
-                <div class="word_title">제시어: 코드캠프</div>
+                <div class="word_title" id="word">제시어: 코드캠프</div>
             </div>
             <div class="wrapper__word__body">
-                <input type="text" class="textbox" placeholder="단어를 입력하세요"><button class="search">검색</button>
+                <input type="text" id ="myword" class="textbox" placeholder="단어를 입력하세요"><button class="search" onclick="startWord()">검색</button>
             </div>
-            <div class="wrapper__word__footer">
+            <div class="wrapper__word__footer" id="result">
                 결과!
             </div>
         </div>
@@ -33,6 +50,12 @@
                 <div class="lotto_title">버튼을 누르세요.</div>
             </div>
             <div class="wrapper__lotto__body">
+                <div>?</div>
+                <div>?</div>
+                <div>?</div>
+                <div>?</div>
+                <div>?</div>
+                <div>?</div>
             </div>
             <div class="wrapper__lotto__footer"><button class="footer_button">Button</button>
             </div>
